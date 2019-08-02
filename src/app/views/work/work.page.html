@@ -1,0 +1,182 @@
+<ion-header>
+    <ion-toolbar color="danger">
+        <ion-title>Time & work Aptitude test</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <br>
+    <p style="text-align: center;">{{displayTime}}</p>
+    <ion-icon ios="ios-briefcase" md="md-briefcase" color="danger" style="zoom:6.0;"></ion-icon>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--Question 1-->
+    <div *ngIf="question1">
+
+        <p style="text-align: center;">1. A, B and C can do a piece of work in 20, 30 and 60 respectively. In how many days can A do the work if he is assisted by B and C on every third day?</p>
+        <ion-radio-group [(ngModel)]="Question1">
+            <ion-item>
+                <ion-label>12 days</ion-label>
+                <ion-radio slot="start" color="danger" value="12 days"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>15 days</ion-label>
+                <ion-radio slot="start" color="danger" value="15 days" checked></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>16 days</ion-label>
+                <ion-radio slot="start" color="danger" value="16 days"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>18 days</ion-label>
+                <ion-radio slot="start" color="danger" value="18 days"></ion-radio>
+            </ion-item>
+
+        </ion-radio-group>
+        <br>
+        <br>
+        <ion-button class="start" expand="full" color="danger" (click)="Submit1()">Next</ion-button>
+    </div>
+    <!--Question 2-->
+    <div *ngIf="question2">
+        <p style="text-align: center;">2. A alone can do a pience of work in 6 days and B alone in 8 days. A and B undertook to do it for R3200. With the help of C, they completed the work in 3 days. How much is to be paid to C</p>
+        <ion-radio-group [(ngModel)]="Question2">
+            <ion-item>
+                <ion-label>R350</ion-label>
+                <ion-radio slot="start" color="danger" value="R350"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>R400</ion-label>
+                <ion-radio slot="start" color="danger" value="R400" checked></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>R600</ion-label>
+                <ion-radio slot="start" color="danger" value="R600"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>R800</ion-label>
+                <ion-radio slot="start" color="danger" value="R800"></ion-radio>
+            </ion-item>
+
+        </ion-radio-group>
+        <br>
+        <br>
+        <ion-button class="start" expand="full" color="danger" (click)="Submit2()">Next</ion-button>
+    </div>
+    <!--Question 3-->
+    <div *ngIf="question3">
+        <p style="text-align: center;">3. If 6 men and 8 boys can do a piece of work in 10 days while 26 men and 48 boys can do the same in 2 days, the time taken by 15 men and 20 boys in doing the same type of work will be:</p>
+        <ion-radio-group [(ngModel)]="Question3">
+            <ion-item>
+                <ion-label>4 days</ion-label>
+                <ion-radio slot="start" color="danger" value="4 days"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>5 days</ion-label>
+                <ion-radio slot="start" color="danger" value="5 days" checked></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>6 days</ion-label>
+                <ion-radio slot="start" color="danger" value="6 days"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>7 days</ion-label>
+                <ion-radio slot="start" color="danger" value="7 days"></ion-radio>
+            </ion-item>
+
+        </ion-radio-group>
+        <br>
+        <br>
+        <ion-button class="start" expand="full" color="danger" (click)="Submit3()">Next</ion-button>
+    </div>
+    <!--Question 4-->
+    <div *ngIf="question4">
+        <p style="text-align: center;">4. A can do a certain work in the same time in which B and C together can do it. If A and B together could do it in 10 days and C alone in 50 days, then B alone could do it in:</p>
+        <ion-radio-group [(ngModel)]="Question4">
+            <ion-item>
+                <ion-label>15 days</ion-label>
+                <ion-radio slot="start" color="danger" value="15 days"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>20 days</ion-label>
+                <ion-radio slot="start" color="danger" value="20 days" checked></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>25 days</ion-label>
+                <ion-radio slot="start" color="danger" value="25 days"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>30 days</ion-label>
+                <ion-radio slot="start" color="danger" value="30 days"></ion-radio>
+            </ion-item>
+
+        </ion-radio-group>
+        <br>
+        <br>
+        <ion-button class="start" expand="full" color="danger" (click)="Submit4()">Next</ion-button>
+    </div>
+    <!--Question 5-->
+    <div *ngIf="question5">
+        <p style="text-align: center;">5. 4 men and 6 women can complete a work in 8 days, while 3 men and 7 women can complete it in 10 days. In how many days will 10 women complete it?</p>
+        <ion-radio-group [(ngModel)]="Question5">
+            <ion-item>
+                <ion-label>35</ion-label>
+                <ion-radio slot="start" color="danger" value="35"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>40</ion-label>
+                <ion-radio slot="start" color="danger" value="40" checked></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>45</ion-label>
+                <ion-radio slot="start" color="danger" value="45"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>50</ion-label>
+                <ion-radio slot="start" color="danger" value="50"></ion-radio>
+            </ion-item>
+
+        </ion-radio-group>
+        <br>
+        <br>
+        <ion-button class="start" expand="full" color="danger" (click)="Submit5()">Next</ion-button>
+    </div>
+    <!--Result Page-->
+    <div *ngIf="question6">
+        <p style="text-align: center;"><b>Score board</b></p>
+
+        <ion-item>
+            <ion-label>Name:</ion-label>
+            <ion-input readonly> &nbsp; {{name}}</ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Your score:</ion-label>
+            <ion-input readonly> &nbsp;{{results}} </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Total questions: 5</ion-label>
+            <!-- <ion-input readonly>5</ion-input> -->
+        </ion-item>
+        <ion-item>
+            <ion-label>Percentage:</ion-label>
+            <ion-input readonly> &nbsp;{{percent}} %</ion-input>
+        </ion-item>
+        <br>
+        <br>
+        <br>
+        <ion-button class="start" expand="full" color="danger" (click)="Exit()">Exit</ion-button>
+    </div>
+</ion-content>

@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-toolbar color="danger">
+        <ion-title>
+            Aptitude Test
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label position="floating" color="danger">Enter your name here</ion-label>
+            <ion-input color="danger" [(ngModel)]="name"></ion-input>
+        </ion-item>
+        <ion-radio-group [(ngModel)]="select">
+            <ion-list-header>
+                <ion-label>Categories:</ion-label>
+            </ion-list-header>
+            <ion-item>
+                <ion-label>Clock</ion-label>
+                <ion-icon ios="ios-clock" md="md-clock" color="danger"></ion-icon>
+                <ion-radio slot="start" color="danger" value="radioClock"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Train</ion-label>
+                <ion-icon ios="ios-subway" md="md-subway" color="danger"></ion-icon>
+                <ion-radio slot="start" color="danger" value="radioTrain" checked></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Time & work</ion-label>
+                <ion-icon ios="ios-briefcase" md="md-briefcase" color="danger"></ion-icon>
+                <ion-radio slot="start" color="danger" value="radioWork"></ion-radio>
+            </ion-item>
+
+        </ion-radio-group>
+
+    </ion-list>
+    <ion-list>
+        <ion-radio-group>
+            <ion-list-header>
+                <ion-label>Instructions:</ion-label>
+            </ion-list-header>
+
+            <ul>
+                <li>Total number of questions: 5</li>
+                <li>Time allocated: 10 minutes.</li>
+                <li>Each question carry 1 mark, no negative marks.</li>
+                <li>All the best.</li>
+            </ul>
+        </ion-radio-group>
+    </ion-list>
+    <br>
+    <ion-button class="start" expand="full" color="danger" (click)="Submit()">Start</ion-button>
+</ion-content>

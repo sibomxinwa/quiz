@@ -1,0 +1,182 @@
+<ion-header>
+    <ion-toolbar color="danger">
+        <ion-title>Clock Aptitude test</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <br>
+    <p style="text-align: center;">{{displayTime}}</p>
+    <ion-icon ios="ios-clock" md="md-clock" color="danger" style="zoom:6.0;"></ion-icon>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--Question 1-->
+    <div *ngIf="question1">
+
+        <p style="text-align: center;">1. How many times in a day, the hands of a clock are straight?</p>
+        <ion-radio-group [(ngModel)]="Question1">
+            <ion-item>
+                <ion-label>55</ion-label>
+                <ion-radio slot="start" color="danger" value="55"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>22</ion-label>
+                <ion-radio slot="start" color="danger" value="22" checked></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>33</ion-label>
+                <ion-radio slot="start" color="danger" value="33"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>44</ion-label>
+                <ion-radio slot="start" color="danger" value="44"></ion-radio>
+            </ion-item>
+
+        </ion-radio-group>
+        <br>
+        <br>
+        <ion-button class="start" expand="full" color="danger" (click)="Submit1()">Next</ion-button>
+    </div>
+    <!--Question 2-->
+    <div *ngIf="question2">
+        <p style="text-align: center;">2. At what time, in minutes, between 3 o-clock and 4 o-clock, both the needles will coincide each other?</p>
+        <ion-radio-group [(ngModel)]="Question2">
+            <ion-item>
+                <ion-label>61.63 min</ion-label>
+                <ion-radio slot="start" color="danger" value="61.63 min"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>61.26 min</ion-label>
+                <ion-radio slot="start" color="danger" value="61.26 min" checked></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>16.36 min</ion-label>
+                <ion-radio slot="start" color="danger" value="16.36 min"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>17.12 min</ion-label>
+                <ion-radio slot="start" color="danger" value="17.12 min"></ion-radio>
+            </ion-item>
+
+        </ion-radio-group>
+        <br>
+        <br>
+        <ion-button class="start" expand="full" color="danger" (click)="Submit2()">Next</ion-button>
+    </div>
+    <!--Question 3-->
+    <div *ngIf="question3">
+        <p style="text-align: center;">3. At what time between 9 and 10 oclock will the hands of a watch be together?</p>
+        <ion-radio-group [(ngModel)]="Question3">
+            <ion-item>
+                <ion-label>45 min past 9</ion-label>
+                <ion-radio slot="start" color="danger" value="45 min past 9"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>49.09 past 9</ion-label>
+                <ion-radio slot="start" color="danger" value="49.09 past 9" checked></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>40 min past 9</ion-label>
+                <ion-radio slot="start" color="danger" value="40 min past 9"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>30 min past 9</ion-label>
+                <ion-radio slot="start" color="danger" value="30 min past 9"></ion-radio>
+            </ion-item>
+
+        </ion-radio-group>
+        <br>
+        <br>
+        <ion-button class="start" expand="full" color="danger" (click)="Submit3()">Next</ion-button>
+    </div>
+    <!--Question 4-->
+    <div *ngIf="question4">
+        <p style="text-align: center;">4. How many times in a day, are the hands of a clock in straight line but opposite in direction?</p>
+        <ion-radio-group [(ngModel)]="Question4">
+            <ion-item>
+                <ion-label>24</ion-label>
+                <ion-radio slot="start" color="danger" value="24"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>33</ion-label>
+                <ion-radio slot="start" color="danger" value="33" checked></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>22</ion-label>
+                <ion-radio slot="start" color="danger" value="22"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>26</ion-label>
+                <ion-radio slot="start" color="danger" value="26"></ion-radio>
+            </ion-item>
+
+        </ion-radio-group>
+        <br>
+        <br>
+        <ion-button class="start" expand="full" color="danger" (click)="Submit4()">Next</ion-button>
+    </div>
+    <!--Question 5-->
+    <div *ngIf="question5">
+        <p style="text-align: center;">5. How many times are the hands of a clock at the right angle in a day?</p>
+        <ion-radio-group [(ngModel)]="Question5">
+            <ion-item>
+                <ion-label>40</ion-label>
+                <ion-radio slot="start" color="danger" value="40"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>36</ion-label>
+                <ion-radio slot="start" color="danger" value="36" checked></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>24</ion-label>
+                <ion-radio slot="start" color="danger" value="24"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>44</ion-label>
+                <ion-radio slot="start" color="danger" value="44"></ion-radio>
+            </ion-item>
+
+        </ion-radio-group>
+        <br>
+        <br>
+        <ion-button class="start" expand="full" color="danger" (click)="Submit5()">Next</ion-button>
+    </div>
+    <!--Result Page-->
+    <div *ngIf="question6">
+        <p style="text-align: center;"><b>Score board</b></p>
+
+        <ion-item>
+            <ion-label>Name:</ion-label>
+            <ion-input readonly> &nbsp;{{name}}</ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Your score:</ion-label>
+            <ion-input readonly> &nbsp;{{results}} </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Total questions: 5</ion-label>
+            <!-- <ion-input readonly>5</ion-input> -->
+        </ion-item>
+        <ion-item>
+            <ion-label>Percentage:</ion-label>
+            <ion-input readonly> &nbsp;{{percent}} %</ion-input>
+        </ion-item>
+        <br>
+        <br>
+        <br>
+        <ion-button class="start" expand="full" color="danger" (click)="Exit()">Exit</ion-button>
+    </div>
+</ion-content>
